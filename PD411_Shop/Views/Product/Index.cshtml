@@ -1,1 +1,36 @@
-﻿<h1>Тут будуть наші товари</h1>
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["Title"] = "Products";
+}
+<div class="text-center">
+
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>CreatedData</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Color</td>
+                    <td>@product.Description</td>
+                    <td><img height="100px" src="https://th.bing.com/th/id/OIP.J5bFk6rU-ZgM3i39q6Dy_wHaFA?w=239&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="It tools" /></td>
+                    <td>@product.CreatedDate.ToString("dd.mm.yyyy")</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

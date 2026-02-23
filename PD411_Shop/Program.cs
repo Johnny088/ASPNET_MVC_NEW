@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
+using PD411_Shop.Data.Initializer;
 using PD411_Shop.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,7 @@ builder.Services.AddControllersWithViews();
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    string connectionString = "Server=localhost;Database=ITShop;Trusted_Connection=True;TrustServerCertificate=True;";
+    string connectionString = @"Server=MIAMI\SQLEXPRESS;Database=ITShop;Trusted_Connection=True;TrustServerCertificate=True;";
     options.UseSqlServer(connectionString);
 });
 
@@ -40,6 +41,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+Seeder.Seed(app); // Seed the database with initial data
 app.Run();
 
 

@@ -1,27 +1,31 @@
-using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
 using PD411_Shop.Models;
 using PD411_Shop.Repositories;
-
+using System.Diagnostics;
 namespace PD411_Shop.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ProductRepository _productRepository;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, ProductRepository productRepository)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
-            _productRepository = productRepository;
+            _context = context;
             
         }
 
         public IActionResult Index()
         {
-            IQueryable<ProductModel> products = _productRepository.GetProductsAsync().Result;
-            return View();
+            //IQueryable<ProductModel> products = _productRepository.GetProductsAsync().Result;
+            //var products = _context.Products.ToList();
+            IEnumerable<ProductModel> products = _context.Products.AsEnumerable();
+            
+            return View(products);
         }
 
         public IActionResult Privacy()
