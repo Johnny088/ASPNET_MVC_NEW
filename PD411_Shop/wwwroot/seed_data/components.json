@@ -1,0 +1,853 @@
+﻿[
+    {
+        "Name": "Processors",
+        "Products": [
+            {
+                "Name": "Intel Core i5-13600K (Processor)",
+                "Description": "14-core desktop processor with hybrid architecture (6 Performance-cores + 8 Efficient-cores), up to 5.1 GHz.",
+                "Price": 320,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Intel_Core_i5_13600K.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Intel Core i7-13700K (Processor)",
+                "Description": "16-core desktop processor (8P + 8E cores) with high multitasking performance, up to 5.4 GHz.",
+                "Price": 420,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Intel_Core_i7_13700K.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Intel Core i9-13900K (Processor)",
+                "Description": "24-core flagship desktop processor (8P + 16E cores), up to 5.8 GHz turbo frequency.",
+                "Price": 580,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Intel_Core_i9_13900K.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "AMD Ryzen 5 5600X (Processor)",
+                "Description": "6-core desktop processor based on Zen 3 architecture, up to 4.6 GHz boost.",
+                "Price": 190,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/7/70/AMD_Ryzen_5_5600X.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "AMD Ryzen 7 5800X (Processor)",
+                "Description": "8-core high-performance desktop processor, ideal for gaming and productivity.",
+                "Price": 260,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/AMD_Ryzen_7_5800X.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "AMD Ryzen 9 5900X (Processor)",
+                "Description": "12-core premium desktop processor with exceptional multi-threaded performance.",
+                "Price": 380,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/AMD_Ryzen_9_5900X.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Intel Core i3-12100F (Processor)",
+                "Description": "4-core budget desktop processor for entry-level gaming and office tasks.",
+                "Price": 110,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Intel_Core_i3_12100F.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "AMD Ryzen 5 7600X (Processor)",
+                "Description": "6-core Zen 4 processor with AM5 support and DDR5 compatibility.",
+                "Price": 300,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/16/AMD_Ryzen_5_7600X.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Intel Core i5-12400 (Processor)",
+                "Description": "6-core mid-range processor with strong single-core performance.",
+                "Price": 210,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Intel_Core_i5_12400.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "AMD Ryzen 7 7700X (Processor)",
+                "Description": "8-core Zen 4 processor with high clock speeds and advanced efficiency.",
+                "Price": 350,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/AMD_Ryzen_7_7700X.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            }
+        ]
+
+    },
+    {
+        "Name": "Graphics Cards",
+        "Products": [
+            {
+                "Name": "NVIDIA GeForce RTX 4090 (Graphics Card)",
+                "Description": "Top-of-the-line GPU with 24 GB GDDR6X, excellent for 4K gaming and creative workloads.",
+                "Price": 1599,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/96/GeForce_RTX_4090.png",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "NVIDIA GeForce RTX 4080 (Graphics Card)",
+                "Description": "High-end GPU with 16 GB GDDR6X, ideal for high-resolution gaming.",
+                "Price": 1199,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/GeForce_RTX_4080.png",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "NVIDIA GeForce RTX 4070 Ti (Graphics Card)",
+                "Description": "Powerful GPU with 12 GB GDDR6X for solid performance at 1440p.",
+                "Price": 799,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/44/GeForce_RTX_4070_Ti.png",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "NVIDIA GeForce RTX 3060 Ti (Graphics Card)",
+                "Description": "Mid-range GPU with 8 GB GDDR6, great for 1080p and 1440p gaming.",
+                "Price": 399,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/14/GeForce_RTX_3060_Ti.png",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "AMD Radeon RX 7900 XTX (Graphics Card)",
+                "Description": "High-performance GPU with 24 GB GDDR6, excellent for gaming and content creation.",
+                "Price": 999,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/AMD_Radeon_RX_7900_XTX.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "AMD Radeon RX 7800 XT (Graphics Card)",
+                "Description": "Strong GPU with 16 GB GDDR6, perfect for 1440p gaming.",
+                "Price": 549,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/AMD_Radeon_RX_7800_XT.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "NVIDIA GeForce RTX 4050 (Graphics Card)",
+                "Description": "Entry-level GPU with 6 GB GDDR6, good for 1080p gaming.",
+                "Price": 299,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/GeForce_RTX_4050.png",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "AMD Radeon RX 6700 XT (Graphics Card)",
+                "Description": "Solid mid-range GPU with 12 GB GDDR6 for 1440p gaming.",
+                "Price": 419,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/AMD_Radeon_RX_6700_XT.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "NVIDIA GeForce RTX 3070 (Graphics Card)",
+                "Description": "Popular GPU with 8 GB GDDR6, excellent for 1440p gaming.",
+                "Price": 499,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/32/GeForce_RTX_3070.png",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "AMD Radeon RX 7600 (Graphics Card)",
+                "Description": "Budget-friendly GPU with 8 GB GDDR6, great for 1080p gaming.",
+                "Price": 269,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/58/AMD_Radeon_RX_7600.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            }
+        ]
+    },
+    {
+        "Name": "RAM Modules",
+        "Products": [
+            {
+                "Name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4 3200MHz",
+                "Description": "High-performance DDR4 memory kit for gaming and productivity.",
+                "Price": 79,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Corsair_Vengeance_LPX_16GB.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "G.Skill Trident Z RGB 32GB (2x16GB) DDR4 3600MHz",
+                "Description": "Premium RGB DDR4 memory with fast timings and stylish lighting.",
+                "Price": 149,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/97/G.Skill_Trident_Z_RGB.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Kingston Fury Beast 16GB (2x8GB) DDR5 5200MHz",
+                "Description": "Next-gen DDR5 memory with improved bandwidth and performance.",
+                "Price": 129,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Kingston_Fury_Beast_DDR5.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Crucial Ballistix 16GB (2x8GB) DDR4 3200MHz",
+                "Description": "Reliable gaming memory with solid performance.",
+                "Price": 74,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Crucial_Ballistix_16GB.jpg",
+                "Amount": 10,
+                "Color": "Red"
+            },
+            {
+                "Name": "TeamGroup T-Force Delta RGB 32GB (2x16GB) DDR4 3600MHz",
+                "Description": "Stylish RGB memory kit with excellent performance.",
+                "Price": 139,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/17/TeamGroup_TForce_Delta_RGB.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Patriot Viper Steel 16GB (2x8GB) DDR4 3600MHz",
+                "Description": "Performance memory with aggressive heat spreader design.",
+                "Price": 85,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Patriot_Viper_Steel_DDR4.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Samsung 32GB DDR5 4800MHz",
+                "Description": "High-quality DDR5 memory from Samsung.",
+                "Price": 169,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Samsung_DDR5_RAM.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "Corsair Dominator Platinum RGB 32GB (2x16GB) DDR5 6000MHz",
+                "Description": "Top-tier DDR5 memory with premium RGB and excellent overclocking.",
+                "Price": 249,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Corsair_Dominator_Platinum_RGB_DDR5.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "HyperX Fury 16GB (2x8GB) DDR4 3200MHz",
+                "Description": "Reliable memory with stable performance for gaming.",
+                "Price": 79,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/HyperX_Fury_DDR4.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ADATA XPG Spectrix D60G 16GB (2x8GB) DDR4 3600MHz",
+                "Description": "RGB memory with unique design and strong performance.",
+                "Price": 119,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/43/ADATA_XPG_Spectrix_D60G.jpg",
+                "Amount": 10,
+                "Color": "White"
+            }
+        ]
+    },
+    {
+        "Name": "Motherboards",
+        "Products": [
+            {
+                "Name": "MSI MAG B850 TOMAHAWK MAX WIFI (Motherboard)",
+                "Description": "High-end AM5 motherboard with robust power delivery, DDR5 support, and built-in Wi-Fi for gaming and content creation systems.",
+                "Price": 230,
+                "Image": "https://example.com/msi_mag_b850_tomahawk_wifi.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ASUS TUF GAMING B850-PLUS WIFI (Motherboard)",
+                "Description": "Durable AM5 board with enhanced cooling, PCIe 5.0 support, and Wi-Fi included — great for modern Ryzen builds.",
+                "Price": 200,
+                "Image": "https://example.com/asus_tuf_b850_plus_wifi.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ASRock B650M-HDV/M.2 (Motherboard)",
+                "Description": "Affordable AM5 motherboard with M.2 slot support and solid basic features for everyday and budget gaming builds.",
+                "Price": 130,
+                "Image": "https://example.com/asrock_b650m_hdv.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ASUS PRIME B650M-K (Motherboard)",
+                "Description": "Reliable mid-range AM5 board with good connectivity and support for DDR5 memory.",
+                "Price": 150,
+                "Image": "https://example.com/asus_prime_b650m_k.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "MSI PRO B760-P II (Motherboard)",
+                "Description": "Intel LGA1700 motherboard with strong power design, multiple memory slots, and PCIe 4.0 support — ideal for Intel 12th–14th Gen CPUs.",
+                "Price": 170,
+                "Image": "https://example.com/msi_pro_b760_p2.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "GIGABYTE H610M S2H V2 (Motherboard)",
+                "Description": "Budget Intel LGA1700 motherboard with DDR5 support and essential connectivity for office and home PCs.",
+                "Price": 90,
+                "Image": "https://example.com/gigabyte_h610m_s2h_v2.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ASUS ROG STRIX Z890-E WIFI (Motherboard)",
+                "Description": "Premium Intel LGA1851 motherboard with PCIe 5.0, DDR5 support, advanced cooling, and Wi-Fi for enthusiast builds.",
+                "Price": 350,
+                "Image": "https://example.com/asus_rog_strix_z890e.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "GIGABYTE B760 GAMING X GEN5 (Motherboard)",
+                "Description": "Intel B760 board with next-gen PCIe support and solid performance for gaming and multitasking.",
+                "Price": 160,
+                "Image": "https://example.com/gigabyte_b760_gaming_x.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ASUS TUF GAMING B760M-PLUS II (Motherboard)",
+                "Description": "Compact Intel motherboard with strong build quality and balanced features for everyday gaming setups.",
+                "Price": 155,
+                "Image": "https://example.com/asus_tuf_b760m_plus_ii.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "MSI MPG B550 GAMING PLUS (Motherboard)",
+                "Description": "AMD AM4 board with PCIe 4.0, solid VRM, and great value for mid-tier Ryzen builds.",
+                "Price": 140,
+                "Image": "https://example.com/msi_mpg_b550_gaming_plus.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            }
+        ]
+    },
+    {
+        "Name": "SSDs",
+        "Products": [
+            {
+                "Name": "Samsung 980 PRO 1TB NVMe SSD",
+                "Description": "High-performance PCIe 4.0 NVMe SSD for gaming and professional workloads.",
+                "Price": 149,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Samsung_980_PRO_1TB.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Western Digital Black SN850 1TB NVMe SSD",
+                "Description": "Fast PCIe 4.0 SSD with excellent read/write speeds for demanding applications.",
+                "Price": 139,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/98/WD_Black_SN850.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Crucial P5 Plus 1TB NVMe SSD",
+                "Description": "Reliable NVMe drive with strong performance for gaming and everyday use.",
+                "Price": 119,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Crucial_P5_Plus.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Kingston KC3000 1TB NVMe SSD",
+                "Description": "High-speed NVMe SSD with great endurance and thermal performance.",
+                "Price": 129,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Kingston_KC3000.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "ADATA XPG SX8200 Pro 1TB NVMe SSD",
+                "Description": "Popular NVMe SSD with solid speeds for gaming and content creation.",
+                "Price": 109,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/31/ADATA_XPG_SX8200_Pro.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Sabrent Rocket 1TB NVMe SSD",
+                "Description": "High-speed NVMe SSD with very competitive performance for its price.",
+                "Price": 119,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Sabrent_Rocket_NVMe.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Seagate FireCuda 520 1TB NVMe SSD",
+                "Description": "Gaming-oriented NVMe SSD with strong performance and reliability.",
+                "Price": 129,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Seagate_FireCuda_520.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Samsung 870 EVO 1TB SATA SSD",
+                "Description": "Reliable SATA SSD with excellent endurance and performance for everyday systems.",
+                "Price": 99,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Samsung_870_EVO.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Crucial MX500 1TB SATA SSD",
+                "Description": "Value-oriented SATA SSD with solid performance and reliability.",
+                "Price": 89,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Crucial_MX500.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Western Digital Blue 1TB SATA SSD",
+                "Description": "Durable SATA SSD with consistent performance for daily computing.",
+                "Price": 84,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/WD_Blue_SSD.jpg",
+                "Amount": 10,
+                "Color": "Blue"
+            }
+        ]
+    },
+    {
+        "Name": "Hard Disk Drives",
+        "Products": [
+            {
+                "Name": "Seagate BarraCuda 1TB 7200RPM HDD",
+                "Description": "Reliable 3.5-inch hard drive with 7200 RPM speed for everyday desktop storage.",
+                "Price": 49,
+                "Image": "https://example.com/seagate_barracuda_1tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Western Digital Blue 1TB 7200RPM HDD",
+                "Description": "Popular desktop hard drive with stable performance and good durability.",
+                "Price": 47,
+                "Image": "https://example.com/wd_blue_1tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Seagate BarraCuda 2TB 7200RPM HDD",
+                "Description": "High-capacity hard drive for gaming libraries and media storage.",
+                "Price": 69,
+                "Image": "https://example.com/seagate_barracuda_2tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Western Digital Black 2TB 7200RPM HDD",
+                "Description": "Performance-focused hard drive designed for gaming and heavy workloads.",
+                "Price": 119,
+                "Image": "https://example.com/wd_black_2tb.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Toshiba P300 1TB 7200RPM HDD",
+                "Description": "Affordable desktop hard drive with solid reliability.",
+                "Price": 45,
+                "Image": "https://example.com/toshiba_p300_1tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Toshiba X300 4TB 7200RPM HDD",
+                "Description": "High-performance 4TB hard drive for large data storage needs.",
+                "Price": 109,
+                "Image": "https://example.com/toshiba_x300_4tb.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Western Digital Red Plus 4TB 5400RPM HDD",
+                "Description": "NAS-optimized hard drive built for 24/7 operation and reliability.",
+                "Price": 129,
+                "Image": "https://example.com/wd_red_plus_4tb.jpg",
+                "Amount": 10,
+                "Color": "Red"
+            },
+            {
+                "Name": "Seagate IronWolf 4TB 5900RPM HDD",
+                "Description": "NAS hard drive designed for multi-bay systems and continuous operation.",
+                "Price": 119,
+                "Image": "https://example.com/seagate_ironwolf_4tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Western Digital Blue 2TB 5400RPM HDD",
+                "Description": "Energy-efficient desktop hard drive with large capacity.",
+                "Price": 59,
+                "Image": "https://example.com/wd_blue_2tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            },
+            {
+                "Name": "Seagate SkyHawk 2TB 5900RPM HDD",
+                "Description": "Surveillance-optimized hard drive built for DVR and security systems.",
+                "Price": 79,
+                "Image": "https://example.com/seagate_skyhawk_2tb.jpg",
+                "Amount": 10,
+                "Color": "Silver"
+            }
+        ]
+    },
+    {
+        "Name": "Power Supplies",
+        "Products": [
+            {
+                "Name": "Corsair RM850x 850W 80+ Gold PSU",
+                "Description": "High-quality fully modular power supply with 80+ Gold efficiency, ideal for gaming and high-performance PCs.",
+                "Price": 149,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Corsair_RM850x.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "EVGA SuperNOVA 750 G5 750W 80+ Gold PSU",
+                "Description": "Reliable fully modular power supply with excellent voltage regulation and efficiency.",
+                "Price": 129,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/55/EVGA_SuperNOVA_750_G5.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Seasonic Focus GX-650 650W 80+ Gold PSU",
+                "Description": "Compact, high-efficiency PSU with fully modular cables and quiet operation.",
+                "Price": 109,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Seasonic_Focus_GX-650.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Thermaltake Toughpower GF1 850W 80+ Gold PSU",
+                "Description": "Premium fully modular PSU with stable power delivery and advanced protection features.",
+                "Price": 139,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Thermaltake_Toughpower_GF1_850W.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Cooler Master MWE Gold 750W 80+ Gold PSU",
+                "Description": "Efficient PSU with semi-modular design, suitable for mid-to-high-end gaming builds.",
+                "Price": 99,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Cooler_Master_MWE_Gold_750W.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Be Quiet! Straight Power 11 750W 80+ Platinum PSU",
+                "Description": "Silent, premium PSU with high efficiency and fully modular cables.",
+                "Price": 169,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Be_Quiet_Straight_Power_11.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Antec Earthwatts Gold Pro 650W 80+ Gold PSU",
+                "Description": "Efficient and reliable PSU with a focus on low noise and stable performance.",
+                "Price": 99,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Antec_Earthwatts_Gold_Pro_650W.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Corsair CX750M 750W 80+ Bronze PSU",
+                "Description": "Semi-modular PSU providing reliable power for mainstream gaming and office systems.",
+                "Price": 89,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Corsair_CX750M.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "EVGA 600 BR 600W 80+ Bronze PSU",
+                "Description": "Affordable, reliable power supply suitable for entry-level PCs.",
+                "Price": 59,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/90/EVGA_600_BR.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Seasonic S12III 650W 80+ Bronze PSU",
+                "Description": "Budget-friendly PSU with good efficiency and quiet operation for basic desktop builds.",
+                "Price": 69,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Seasonic_S12III_650W.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            }
+        ]
+    },
+    {
+        "Name": "PC Cases",
+        "Products": [
+            {
+                "Name": "NZXT H510 Mid Tower Case",
+                "Description": "Sleek and minimalistic mid-tower case with excellent airflow and cable management.",
+                "Price": 79,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/27/NZXT_H510.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Corsair iCUE 4000X RGB Mid Tower Case",
+                "Description": "Stylish mid-tower with tempered glass panels and built-in RGB lighting.",
+                "Price": 119,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Corsair_iCUE_4000X_RGB.jpg",
+                "Amount": 10,
+                "Color": "White"
+            },
+            {
+                "Name": "Fractal Design Meshify C Mid Tower Case",
+                "Description": "High-airflow mid-tower with compact design and excellent cooling potential.",
+                "Price": 99,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fractal_Design_Meshify_C.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Phanteks Eclipse P400A Digital Mid Tower Case",
+                "Description": "Airflow-optimized mid-tower with RGB fans and tempered glass side panel.",
+                "Price": 109,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Phanteks_Eclipse_P400A_Digital.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Cooler Master MasterBox NR600 Mid Tower Case",
+                "Description": "Minimalistic and spacious mid-tower with mesh front panel for superior airflow.",
+                "Price": 79,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Cooler_Master_MasterBox_NR600.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Lian Li PC-O11 Dynamic Mid Tower Case",
+                "Description": "Premium mid-tower with dual-chamber design and tempered glass panels.",
+                "Price": 139,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Lian_Li_PC-O11_Dynamic.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Be Quiet! Pure Base 500DX Mid Tower Case",
+                "Description": "High-airflow case with quiet operation and RGB lighting support.",
+                "Price": 99,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Be_Quiet_Pure_Base_500DX.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Thermaltake H510 Tempered Glass Mid Tower Case",
+                "Description": "Tempered glass mid-tower with excellent expandability and modern aesthetics.",
+                "Price": 89,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Thermaltake_H510_TG.jpg",
+                "Amount": 10,
+                "Color": "White"
+            },
+            {
+                "Name": "NZXT H710 Mid Tower Case",
+                "Description": "Spacious mid-tower with premium build quality and excellent cable management.",
+                "Price": 169,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/22/NZXT_H710.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Corsair Carbide Series 275R Mid Tower Case",
+                "Description": "Clean and minimalist design with good airflow and build space for gaming setups.",
+                "Price": 89,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Corsair_Carbide_275R.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            }
+        ]
+    },
+    {
+        "Name": "CPU Coolers",
+        "Products": [
+            {
+                "Name": "Noctua NH-D15",
+                "Description": "High-performance dual-tower air cooler with exceptional thermal performance and quiet operation.",
+                "Price": 99,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Noctua_NH-D15.jpg",
+                "Amount": 10,
+                "Color": "Brown"
+            },
+            {
+                "Name": "be quiet! Dark Rock Pro 4",
+                "Description": "Premium air cooler with dual heatsinks and whisper-quiet fans.",
+                "Price": 89,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Be_Quiet_Dark_Rock_Pro_4.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Cooler Master Hyper 212 Black Edition",
+                "Description": "Popular air cooler with strong performance for mainstream CPUs.",
+                "Price": 39,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Cooler_Master_Hyper_212_Black_Edition.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "NZXT Kraken X63",
+                "Description": "All-in-one 280mm liquid cooler with RGB and high cooling efficiency.",
+                "Price": 129,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/63/NZXT_Kraken_X63.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Corsair iCUE H150i Elite Capellix",
+                "Description": "360mm AIO liquid cooler with RGB lighting and powerful pump design.",
+                "Price": 179,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Corsair_iCUE_H150i_Elite_Capellix.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Deepcool Assassin III",
+                "Description": "High-end dual-tower air cooler with superior thermal performance.",
+                "Price": 89,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Deepcool_Assassin_III.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Arctic Liquid Freezer II 280",
+                "Description": "Quiet and efficient 280mm all-in-one liquid cooler for high-performance CPUs.",
+                "Price": 119,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Arctic_Liquid_Freezer_II_280.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Thermaltake Floe Riing RGB 360",
+                "Description": "360mm AIO cooler with RGB fans and strong cooling for overclocked CPUs.",
+                "Price": 159,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Thermaltake_Floe_Riing_RGB_360.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Noctua NH-U12S",
+                "Description": "Single tower air cooler with excellent performance and quiet operation.",
+                "Price": 59,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Noctua_NH-U12S.jpg",
+                "Amount": 10,
+                "Color": "Brown"
+            },
+            {
+                "Name": "be quiet! Shadow Rock 3",
+                "Description": "Affordable high-performance air cooler with silent operation.",
+                "Price": 49,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Be_Quiet_Shadow_Rock_3.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            }
+        ]
+    },
+    {
+        "Name": "Network Cards",
+        "Products": [
+            {
+                "Name": "Intel EXPI9301CTBLK Network Adapter",
+                "Description": "Reliable gigabit Ethernet PCIe card for desktop PCs with stable network performance.",
+                "Price": 29,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Intel_EXPI9301CTBLK.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "TP-Link TG-3468 Gigabit PCIe Network Adapter",
+                "Description": "Affordable PCIe gigabit network card with easy installation and stable connectivity.",
+                "Price": 19,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/5/50/TP-Link_TG-3468.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "ASUS XG-C100C 10G Network Adapter",
+                "Description": "High-speed 10 Gigabit PCIe network card for professional and gaming setups.",
+                "Price": 119,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/ASUS_XG-C100C.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "TP-Link Archer TX3000E Wi-Fi 6 PCIe Adapter",
+                "Description": "Dual-band Wi-Fi 6 PCIe card with Bluetooth 5.0 support for fast wireless connectivity.",
+                "Price": 49,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/9/90/TP-Link_Archer_TX3000E.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Intel Wi-Fi 6 AX200 PCIe Adapter",
+                "Description": "High-performance Wi-Fi 6 adapter with Bluetooth 5.1, ideal for modern wireless setups.",
+                "Price": 39,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Intel_AX200.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "ASUS PCE-AC68 AC1900 PCIe Wi-Fi Adapter",
+                "Description": "High-speed dual-band Wi-Fi PCIe card with external antennas for strong signal reception.",
+                "Price": 59,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/6/61/ASUS_PCE-AC68.jpg",
+                "Amount": 10,
+                "Color": "Black"
+            },
+            {
+                "Name": "Realtek RTL8111H Gigabit Ethernet Adapter",
+                "Description": "Standard gigabit PCIe network card with reliable wired connection for desktops.",
+                "Price": 14,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Realtek_RTL8111H.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "TP-Link TG-3468V Gigabit PCIe Network Adapter",
+                "Description": "Compact and cost-effective PCIe gigabit card with stable performance.",
+                "Price": 17,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/TP-Link_TG-3468V.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "Intel I350-T4 Quad Port Network Adapter",
+                "Description": "Enterprise-grade 4-port gigabit PCIe network card for servers and workstations.",
+                "Price": 199,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Intel_I350-T4.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            },
+            {
+                "Name": "ASUS XG-C100F 10G Network Adapter",
+                "Description": "High-speed 10G PCIe network card for gaming, NAS, and professional workloads.",
+                "Price": 129,
+                "Image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/ASUS_XG-C100F.jpg",
+                "Amount": 10,
+                "Color": "Green"
+            }
+        ]
+    }
+]

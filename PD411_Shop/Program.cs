@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
+using PD411_Shop.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +10,14 @@ builder.Services.AddControllersWithViews();
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    string connectionString = "Server=localhost;Database=PD411_MVC_SHOP;Trusted_Connection=True;TrustServerCertificate=True;";
+    string connectionString = "Server=localhost;Database=ITShop;Trusted_Connection=True;TrustServerCertificate=True;";
     options.UseSqlServer(connectionString);
 });
+
+
+builder.Services.AddScoped<ProductRepository>();
+
+
 
 var app = builder.Build();
 
@@ -35,3 +41,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 app.Run();
+
+
+
+//need to check ==> dependency injection on the internet
