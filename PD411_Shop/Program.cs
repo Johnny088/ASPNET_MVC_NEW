@@ -47,3 +47,6 @@ app.Run();
 
 
 //need to check ==> dependency injection on the internet
+// update?
+
+// multipart/form-data for sending the files, not string TYPE ==> IFormFile

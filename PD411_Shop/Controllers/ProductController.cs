@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
 using PD411_Shop.Models;
 using PD411_Shop.ViewModels;
@@ -12,6 +14,13 @@ namespace PD411_Shop.Controllers
         {
             _context = context;
         }
+        private async Task<IEnumerable<SelectListItem>> GetSelectCategoriesAsync()
+        {
+            List<CategoryModel> categories = await _context.Categories.ToListAsync();
+            IEnumerable<SelectListItem> selectItems = categories
+                .Select(c => new SelectListItem(c.Name, c.Id.ToString()));
+            return selectItems;
+        }
         public IActionResult Index()
         {
             var products = _context.Products.AsEnumerable();
@@ -21,12 +30,29 @@ namespace PD411_Shop.Controllers
         //get
         public async Task<IActionResult> Create()
         {
-            return View();
+
+            var viewModel = new CreateProductVM
+            {
+                SelectCategories = await GetSelectCategoriesAsync()
+            };
+            return View(viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken] // defends from xcrf attaks  (fake account with someone's token)
         public async Task<IActionResult> Create([FromForm]CreateProductVM vm) 
         {
-            
+            //var modelState = ModelState; // default controller state (inheritance)
+            //var errors = ModelState
+            //    .Select(s => new KeyValuePair<string, string>(s.Key, s.Value.Errors.FirstOrDefault()?.ErrorMessage));
+            //foreach(var item in errors)
+            //{
+            //    Console.WriteLine($"{item.Key} - {item.Value}");
+            //}
+            if (!ModelState.IsValid)
+            {
+                vm.SelectCategories = await GetSelectCategoriesAsync();
+                return View(vm);
+            }
             var category = _context.Categories.FirstOrDefault();
             if (category == null)
             {
@@ -73,7 +99,7 @@ namespace PD411_Shop.Controllers
                     string filePath = Path.Combine($"{imagesPath}", product.Image);
                     if (System.IO.File.Exists(imagesPath))
                     {
-                        System.IO.File.Delete(imagesPath);
+                        System.IO.File.Delete(filePath);
                     }
                     
                 }

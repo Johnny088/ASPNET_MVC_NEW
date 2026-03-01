@@ -1,51 +1,52 @@
 ﻿@model CreateProductVM;
 
 <div class="d-flex justify-content-center w-100  m-auto">
-<form class="w-50" 
-method="post" 
-asp-controller="Product" 
-asp-action="Create"
-enctype="multipart/form-data">
+    <form class="w-50"
+          method="post"
+          asp-controller="Product"
+          asp-action="Create"
+          enctype="multipart/form-data">
 
-    <fieldset>
-        <div>
-            <label for="name" class="form-label mt-4">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter the name">
-            <small hidden  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-            <div>
-                <label for="description" class="form-label mt-4"> Product description</label>
-                <textarea class="form-control" id="description" name="description" placeholder="Enter the product's description" rows="3"></textarea>
+        <fieldset>
+            <div class=" mb-2">
+                <label for="name" class="form-label mt-4">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter the name" asp-for="Name">
+                <span asp-validation-for="Name" style="color: red"></span>
             </div>
-        <div>
-            <label for="price" class="form-label mt-4">Price</label>
-            <input type="number" class="form-control" id="price" name="price" placeholder="Enter the price">
-            <small hidden  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div>
-            <label for="image" class="form-label mt-4">Image</label>
-            <input accept="image/*" type="file" class="form-control" id="image" name="image" placeholder="put the image">
-            <small hidden  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div>
-            <label for="amount" class="form-label mt-4">Number of products</label>
-            <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter number of the pruducts">
-            <small hidden  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div>
-            <label for="color" class="form-label mt-4">Color</label>
-            <input type="text" class="form-control" id="color" name="color" placeholder="Enter the color">
-            <small hidden  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="mb-3">
-            <label for="category" class="form-label mt-4">Category is in process...</label>
-            <input type="text" class="form-control" id="category" placeholder="Enter the category">
-            <small hidden  class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="text-center">
-            <input class="btn btn-success w-25" type="submit" value="Add"/>
-            <a asp-controller="Product" asp-action="Index" class="btn btn-outline-danger w-25">Back</a>
-        </div>
-    </fieldset>
-</form>
+            <div class="mb-2">
+                <label for="description" class="form-label "> Product description</label>
+                <textarea class="form-control" id="description" name="description" placeholder="Enter the product's description" rows="3" asp-for="Description"></textarea>
+            </div>
+            <div class="mb-2">
+                <label for="price" class="form-label ">Price</label>
+                <input min="0" type="number" value="@Model.Price" class="form-control" id="price" name="price" placeholder="Enter the price" asp-for="Price">
+                <span asp-validation-for="Price" style="color: red"></span>
+            </div>
+
+            <div class="mb-2">
+                <label for="amount" class="form-label">Number of products</label>
+                <input min="0" type="number" value="@Model.Amount" class="form-control" id="amount" name="amount" placeholder="Enter number of the pruducts" asp-for="Amount">
+                <span asp-validation-for="Amount" style="color: red"></span>
+            </div>
+            <div class="mb-2">
+                <label for="color" class="form-label">Color</label>
+                <input type="text" class="form-control" id="color" name="color" placeholder="Enter the color" asp-for="Color">
+                <span asp-validation-for="Color" style="color: red"></span>
+            </div>
+            <div class="mb-2">
+                <label for="categoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" asp-items="@Model.SelectCategories" class="form-select">
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input accept="image/*" type="file" class="form-control" id="image" name="image" placeholder="put the image" asp-for="Image">
+
+            </div>
+            <div class="text-center">
+                <input class="btn btn-success w-25" type="submit" value="Add" />
+                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-danger w-25">Back</a>
+            </div>
+        </fieldset>
+    </form>
 </div>
