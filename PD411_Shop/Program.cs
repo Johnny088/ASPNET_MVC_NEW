@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    string connectionString = @"Server=MIAMI\SQLEXPRESS;Database=ITShop;Trusted_Connection=True;TrustServerCertificate=True;";
+    string connectionString = builder.Configuration.GetConnectionString("LocalDB")!;
     options.UseSqlServer(connectionString);
 });
 
