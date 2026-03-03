@@ -33,3 +33,10 @@ body {
     scale: 1.5;
     transition: transform 0.3s ease;
 }
+.my-sidebar{
+    text-decoration: none;
+}
+.my-sidebar:hover{
+    color: blue;
+    cursor: pointer;
+}

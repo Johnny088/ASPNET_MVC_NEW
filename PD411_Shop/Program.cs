@@ -47,6 +47,6 @@ app.Run();
 
 
 //need to check ==> dependency injection on the internet
-// update?
+// update? categories - CRUD
 
 // multipart/form-data for sending the files, not string TYPE ==> IFormFile

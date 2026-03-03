@@ -1,28 +1,81 @@
-﻿@model IEnumerable<ProductModel>
+﻿@model HomeVM
 @{
     ViewData["Title"] = "Home Page";
 }
-<div class="text-center">
-    <h1>Main page</h1>
-
-    @* <table class="table table-striped">
-        <thead class="table-dark">
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-        @foreach(var product in Model)
+<div class="d-flex">
+    <aside class="flex-grow-0 p-4 border-end text-nowrap">
+        @foreach (var category in Model.Categories)
         {
-            <tr>
-                <td>@product.Id</td>
-                <td>@product.Name</td>
-                <td>@product.Price</td>
-            </tr>
-            
+            <a asp-action="Index" asp-route-category="@category.Id" class="d-block mb-2 my-sidebar">@category.Name</a>
+
         }
-        </tbody>
-    </table> *@
+    </aside>
+
+    <main class="flex-grow-1 p-4 ">
+        <div class="row justify-content-center mb-4">
+            @foreach (var product in Model.Products)
+            {
+                @* <div class="card m-1" style="width: 18rem;">
+                    <img height="200" width="200" style="object-fit: contain" src="~/images/@(product.Image ?? "default.webp")" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">$@product.Price</p>
+                        <a href="#" class="btn btn-primary">View more</a>
+                    </div>
+                </div> *@
+                @* second option +==> *@
+                <partial name="_ProductCard" model="product" />
+            }
+        </div>
+        <div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination d-flex justify-content-center">
+                    @if (@Model.Pagination.Page != 1)
+                    {
+                        <li class="page-item"><a class="page-link" asp-action="Index" asp-route-page="1" asp-route-category="@Model.CategoryId"><i class="bi bi-chevron-double-left"></i></a></li>
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Previous"
+                               asp-action="Index"
+                               asp-route-page="@(Model.Pagination.Page - 1)"
+                               asp-route-category="@Model.CategoryId">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    }
+
+                    @for (int i = 1; i <= Model.Pagination.PageCount; i++)
+                    {
+                        
+                        <li class="page-item @(i == Model.Pagination.Page ? "active" : "")">
+                            <a class="page-link"
+                               asp-action="Index"
+                               asp-controller="Home"
+                               asp-route-category="@Model.CategoryId"
+                               asp-route-page="@i">
+                                @i
+                            </a>
+                            
+                        </li>
+                    }
+                    @if (@Model.Pagination.Page != @Model.Pagination.PageCount)
+                    {
+
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Next"
+                               asp-action="Index"
+                               asp-route-page="@(Model.Pagination.Page + 1)"
+                               asp-route-category="@Model.CategoryId">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                        <li class="page-item "><a class="page-link" asp-action="Index" asp-route-page="@Model.Pagination.PageCount" asp-route-category="@Model.CategoryId"><i class="bi bi-chevron-double-right"></i></a></li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+
 </div>

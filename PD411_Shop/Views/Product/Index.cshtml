@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Products";
 }
-<div class="text-center">
+<div class="text-center container">
     <table class="table table-striped align-middle">
         <thead class="table-dark">
             <tr>
@@ -10,6 +10,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Color</th>
+                <th>Category</th>
                 <th>Description</th>
                 <th>Image</th>
                 <th>Created Data</th>
@@ -28,6 +29,7 @@
                     <td>@product.Name</td>
                     <td>@product.Price</td>
                     <td>@product.Color</td>
+                    <td>@product.Category!.Name</td>
                     <td>@product.Description</td>
                     <td><img class="image-scale" height="50" src="~/images/@(product.Image ?? "default.webp")" alt="@product.Name" /></td>
                     <td>@product.CreatedDate.ToString("dd.mm.yyyy")</td>

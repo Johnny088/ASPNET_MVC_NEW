@@ -23,8 +23,7 @@ namespace PD411_Shop.Controllers
         }
         public IActionResult Index()
         {
-            var products = _context.Products.AsEnumerable();
-            Console.WriteLine("get");
+            var products = _context.Products.Include(p => p.Category).AsNoTracking().AsEnumerable();
             return View(products);
         }
         //get
