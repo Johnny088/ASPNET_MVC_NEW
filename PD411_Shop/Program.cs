@@ -6,6 +6,7 @@ using PD411_Shop.Data.Initializer;
 using PD411_Shop.Models;
 using PD411_Shop.Repositories;
 using PD411_Shop.Services;
+using PD411_Shop.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +45,10 @@ builder.Services.AddScoped<ProductRepository>();
 
 // Add services
 builder.Services.AddScoped<IEmailSender, EmailService>();
+
+// add options
+
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
 
 
 var app = builder.Build();

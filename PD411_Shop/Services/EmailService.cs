@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.Options;
+using PD411_Shop.Settings;
 using System.Net;
 using System.Net.Mail;
 
@@ -11,12 +13,15 @@ namespace PD411_Shop.Services
         private readonly string _email;
         private readonly string _password;
         private readonly SmtpClient _smtpClient;
-        public EmailService()
+        public EmailService(IOptions<SmtpSettings> smtpOptions)
         {
-            _email = "espgoodlife22@gmail.com";
-            _password = "yxzd zjrw mkxg frrs";
-            _host = "smtp.gmail.com";
-            _port = 587;
+            var settings = smtpOptions.Value;
+
+            _host = settings.Host;
+            _port = settings.Port;
+
+            _email = settings.Email;
+            _password = settings.Password;
 
             _smtpClient = new SmtpClient(_host, _port);
             _smtpClient.Credentials = new NetworkCredential(_email, _password);
