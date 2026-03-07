@@ -12,8 +12,8 @@ using PD411_Shop.Data;
 namespace PD411_Shop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260307023558_addNewColums")]
-    partial class addNewColums
+    [Migration("20260307114318_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -5,6 +5,7 @@ using PD411_Shop.Data;
 using PD411_Shop.Data.Initializer;
 using PD411_Shop.Models;
 using PD411_Shop.Repositories;
+using PD411_Shop.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,10 @@ builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
 
 
 builder.Services.AddScoped<ProductRepository>();
+
+
+// Add services
+builder.Services.AddScoped<IEmailSender, EmailService>();
 
 
 var app = builder.Build();
@@ -78,3 +83,5 @@ app.Run();
 
 //2. Написати стоірнку із детальної інформацією про товар.
 //	Відповідно на головній сторінці якщо натиснути на товар то повинно перенаправити користувача на стоірнку із детальної інформацією
+
+//Need to add name and surname to the register form
