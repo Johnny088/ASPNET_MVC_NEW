@@ -15,29 +15,38 @@ namespace PD411_Shop.Services
         private readonly SmtpClient _smtpClient;
         public EmailService(IOptions<SmtpSettings> smtpOptions)
         {
-            var settings = smtpOptions.Value;
+            try
+            {
+                var settings = smtpOptions.Value;
 
-            _host = settings.Host;
-            _port = settings.Port;
+                _host = settings.Host;
+                _port = settings.Port;
 
-            _email = settings.Email;
-            _password = settings.Password;
+                _email = settings.Email;
+                _password = settings.Password;
 
-            _smtpClient = new SmtpClient(_host, _port);
-            _smtpClient.Credentials = new NetworkCredential(_email, _password);
-            _smtpClient.EnableSsl = true;                 // enable coding our data for security 
+                _smtpClient = new SmtpClient(_host, _port);
+                _smtpClient.Credentials = new NetworkCredential(_email, _password);
+                _smtpClient.EnableSsl = true;                 // enable coding our data for security 
+            }
+            catch(Exception) { }
         }
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            var mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress(_email);
-            mailMessage.To.Add(email);
-            mailMessage.Subject = subject;
-            mailMessage.Body = htmlMessage;
-            mailMessage.IsBodyHtml = true;
+            try
+            {
+                var mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress(_email);
+                mailMessage.To.Add(email);
+                mailMessage.Subject = subject;
+                mailMessage.Body = htmlMessage;
+                mailMessage.IsBodyHtml = true;
 
-            await _smtpClient.SendMailAsync(mailMessage);
-        
+                await _smtpClient.SendMailAsync(mailMessage);
+
+            }
+            catch (Exception) {
+            }
         }
     }
 }
