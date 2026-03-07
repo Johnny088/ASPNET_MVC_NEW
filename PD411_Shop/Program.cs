@@ -1,6 +1,9 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
 using PD411_Shop.Data.Initializer;
+using PD411_Shop.Models;
 using PD411_Shop.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,9 +18,27 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+//builder.Services.AddDefaultIdentity<UserModel>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>();
+//-----------------identity--------------------
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+
+    options.Password.RequiredLength = 6;
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+})
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders()
+    .AddDefaultUI();
+
+
+
 
 builder.Services.AddScoped<ProductRepository>();
-
 
 
 var app = builder.Build();
@@ -33,7 +54,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication(); //important!!! first Authentification then ==> Authorization
 app.UseAuthorization();
+app.MapRazorPages();
 
 app.MapStaticAssets();
 
