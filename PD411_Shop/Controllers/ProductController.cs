@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
@@ -7,6 +8,7 @@ using PD411_Shop.ViewModels;
 
 namespace PD411_Shop.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
@@ -23,6 +25,12 @@ namespace PD411_Shop.Controllers
         }
         public IActionResult Index()
         {
+            if(User.Identity == null || !User.Identity.IsAuthenticated)
+            {
+                return RedirectToPage("/Account/Login", new {area = "identity"});
+            }
+
+
             var products = _context.Products.Include(p => p.Category).AsNoTracking().AsEnumerable();
             return View(products);
         }
