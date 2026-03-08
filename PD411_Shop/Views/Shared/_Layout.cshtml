@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+@inject IHttpContextAccessor contextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -32,10 +35,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About us</a>
                         </li>
+                        @if(User.IsInRole("admin"))
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
+                        }
+                        
                     </ul>
+                    <div class="flex-grow-0">
+                        <a asp-action="Index" asp-controller="Cart" style="" class="text-decoration-none">
+
+                        <i class="bi bi-cart4 text-success" style="font-size: 1.5rem">
+                        </i>
+                           <span class="badge text-light">@CartService.ItemsCount(contextAccessor.HttpContext!.Session)</span>
+                        </a>
+                    </div>
                     <div class="flex-grow-0">
                         <partial name="_loginPartial">
                     </div>

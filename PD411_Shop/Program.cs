@@ -37,7 +37,15 @@ builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
     .AddDefaultTokenProviders()
     .AddDefaultUI();
 
+// add session
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(1);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 
+});
 
 
 builder.Services.AddScoped<ProductRepository>();
@@ -63,6 +71,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseSession();
+
 
 app.UseAuthentication(); //important!!! first Authentification then ==> Authorization
 app.UseAuthorization();

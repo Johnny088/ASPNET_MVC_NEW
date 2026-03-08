@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using PD411_Shop.Data;
 using PD411_Shop.Models;
 using PD411_Shop.Repositories;
+using PD411_Shop.Services;
 using PD411_Shop.ViewModels;
 using System.Diagnostics;
+using System.Text.Json;
 namespace PD411_Shop.Controllers
 {
     public class HomeController : Controller
@@ -22,6 +24,12 @@ namespace PD411_Shop.Controllers
 
         public IActionResult Index(int? category, [FromQuery]PaginationVM pagination) //category as name here must be equil to the name of asp-route from Index.cshtml
         {
+
+            //List<ProductModel> products1 = new List<ProductModel>();
+
+            //HttpContext.Session.Set(products1);
+
+
             List<CategoryModel> categories = _context.Categories.ToList();
             IQueryable<ProductModel> products = _context.Products;
             if (category != null && categories.Any(c => c.Id == category))

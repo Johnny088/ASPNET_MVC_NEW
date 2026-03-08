@@ -1,10 +1,20 @@
-﻿@model ProductModel
-
+﻿@inject IHttpContextAccessor contextAccessor
+@model ProductModel
 <div class="card m-1" style="width: 18rem;">
     <img height="200" width="200" style="object-fit: contain" src="~/images/@(Model.Image ?? "default.webp")" class="card-img-top" alt="@Model.Name">
     <div class="card-body">
         <h5 class="card-title">@Model.Name</h5>
         <p class="card-text">$@Model.Price</p>
-        <a href="#" class="btn btn-primary">View more</a>
+        <div class="text-end">
+            @if(CartService.IsInCart(contextAccessor.HttpContext!.Session, Model.Id))
+            {
+                <a asp-controller="Cart" asp-action="Remove" asp-route-id="@Model.Id" class="bi bi-cart4 text-danger" style="font-size: 1.5rem"></a>
+            }
+            else
+            {
+                <a asp-controller="Cart" asp-action="Add" asp-route-id="@Model.Id" class="bi bi-cart4 text-success" style="font-size: 1.5rem"></a>
+            }
+            
+        </div>
     </div>
 </div>

@@ -40,3 +40,12 @@ body {
     color: blue;
     cursor: pointer;
 }
+.badge{
+    background-color: orange;
+    position: relative;
+    top: -15px;
+    left: -20px;
+    border: 1px solid black;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
