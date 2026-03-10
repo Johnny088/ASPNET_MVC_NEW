@@ -13,42 +13,25 @@ namespace PD411_Shop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ProductRepository _productRepository;
         private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context, ProductRepository productRepository)
         {
             _logger = logger;
             _context = context;
-            
+            _productRepository = productRepository;
         }
 
-        public IActionResult Index(int? category, [FromQuery]PaginationVM pagination) //category as name here must be equil to the name of asp-route from Index.cshtml
+        public async Task<IActionResult> Index(int? category, [FromQuery]PaginationVM pagination) //category as name here must be equil to the name of asp-route from Index.cshtml
         {
 
-            //List<ProductModel> products1 = new List<ProductModel>();
-
-            //HttpContext.Session.Set(products1);
-
-
             List<CategoryModel> categories = _context.Categories.ToList();
-            IQueryable<ProductModel> products = _context.Products;
-            if (category != null && categories.Any(c => c.Id == category))
-            {
-                products = products.Where(p => p.CategoryId == category);
-            }
-            // Pagination
-            pagination.PageSize = pagination.PageSize < 1 ? 20 : pagination.PageSize;
-            pagination.PageCount = (int)Math.Ceiling((double)products.Count() / pagination.PageSize);
-            pagination.Page = pagination.Page < 1 || pagination.Page > pagination.PageCount ? 1 : pagination.Page;
 
-            products = products
-                .Skip(pagination.PageSize * (pagination.Page - 1))
-                .Take(pagination.PageSize)
-                .OrderBy(p => p.Id);
 
             var homeVM = new HomeVM
             {
-                Products = products,
+                Products = await _productRepository.GetAllAsync(pagination, category),
                 Categories = categories,
                 Pagination = pagination,
                 CategoryId = category,

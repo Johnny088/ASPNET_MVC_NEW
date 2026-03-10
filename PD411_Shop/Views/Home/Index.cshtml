@@ -6,7 +6,9 @@
     <aside class="flex-grow-0 p-4 border-end text-nowrap">
         @foreach (var category in Model.Categories)
         {
-            <a asp-action="Index" asp-route-category="@category.Id" class="d-block mb-2 my-sidebar">@category.Name</a>
+            <a asp-action="Index" asp-route-category="@category.Id" class="d-block mb-2 my-sidebar">
+                <i class="bi @category.Icon mx-1"></i>
+                @category.Name</a>
 
         }
     </aside>

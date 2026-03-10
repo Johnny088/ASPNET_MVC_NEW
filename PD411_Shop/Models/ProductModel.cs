@@ -1,8 +1,10 @@
-﻿namespace PD411_Shop.Models
+﻿using PD411_Shop.Repositories;
+
+namespace PD411_Shop.Models
 {
-    public class ProductModel
+    public class ProductModel: BaseModel
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public required string Name { get; set; }
         public string? Description { get; set; }
         public double Price { get; set; }

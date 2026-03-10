@@ -27,6 +27,10 @@ namespace PD411_Shop.Data
                 entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(100);
+
+                entity.Property(e => e.Icon)
+                .HasMaxLength(50)
+                .HasDefaultValue("bi-activity");
             });
 
             // Product

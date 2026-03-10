@@ -7,6 +7,7 @@ using PD411_Shop.Models;
 using PD411_Shop.Repositories;
 using PD411_Shop.Services;
 using PD411_Shop.Settings;
+using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,7 +49,11 @@ builder.Services.AddSession(options =>
 });
 
 
+
 builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<CategoryRepository>();
+builder.Services.AddScoped<ImageService>();
+
 
 
 // Add services
@@ -57,6 +62,7 @@ builder.Services.AddScoped<IEmailSender, EmailService>();
 // add options
 
 builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+
 
 
 var app = builder.Build();

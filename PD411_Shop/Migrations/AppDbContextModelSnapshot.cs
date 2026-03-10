@@ -163,6 +163,13 @@ namespace PD411_Shop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValue("bi-activity");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
