@@ -9,8 +9,8 @@
             <a asp-action="Index" asp-route-category="@category.Id" class="d-block mb-2 my-sidebar">
                 <i class="bi @category.Icon mx-1"></i>
                 @category.Name</a>
-
         }
+        <a asp-controller="Category" asp-action="Create" class="btn btn-outline-success">Add New</a>
     </aside>
 
     <main class="flex-grow-1 p-4 ">
