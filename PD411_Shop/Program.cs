@@ -8,6 +8,7 @@ using PD411_Shop.Repositories;
 using PD411_Shop.Services;
 using PD411_Shop.Settings;
 using System.IdentityModel.Tokens.Jwt;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +38,13 @@ builder.Services.AddIdentity<UserModel, IdentityRole>(options =>
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders()
     .AddDefaultUI();
-
+// add automapper
+builder.Services.AddAutoMapper(
+    cfg =>
+    {
+        cfg.LicenseKey = "";
+    }
+    ,AppDomain.CurrentDomain.GetAssemblies());
 // add session
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession(options =>
@@ -97,7 +104,7 @@ app.Run();
 
 
 //need to check ==> dependency injection on the internet
-// update? categories - CRUD
+
 
 // multipart/form-data for sending the files, not string TYPE ==> IFormFile
 

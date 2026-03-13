@@ -1,8 +1,11 @@
 ﻿@model List<ProductModel>
 <div class="text-center">
     <h1>Pruducts Cart</h1>
+    <ul>
     @foreach (var p in Model)
     {
-        <p>@p.Name @p.</p>
+        <li><p> @p.Category </p></li>
     }
+    </ul>
 </div>
+
