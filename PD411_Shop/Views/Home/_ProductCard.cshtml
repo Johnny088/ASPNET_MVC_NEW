@@ -12,7 +12,11 @@
             }
             else
             {
-                <a asp-controller="Cart" asp-action="Add" asp-route-id="@Model.Id" class="bi bi-cart4 text-success" style="font-size: 1.5rem"></a>
+                <a asp-controller="Cart" asp-action="Add" asp-route-id="@Model.Id">
+                    <i class="bi bi-cart4 text-success" style="font-size: 1.5rem"></i>
+                    </a>
+                
+               
             }
             
         </div>

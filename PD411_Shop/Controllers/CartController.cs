@@ -16,7 +16,11 @@ namespace PD411_Shop.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var items = CartService.GetItems(HttpContext.Session);
+            var ids = items.Select((i) => i.ProductId).ToList();
+            var products = _context.Products
+                .Where((p) => ids.Contains(p.Id)).ToList();
+            return View(products);
         }
         public async Task<IActionResult> Add(int id)
         {
@@ -28,5 +32,6 @@ namespace PD411_Shop.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+        
     }
 }

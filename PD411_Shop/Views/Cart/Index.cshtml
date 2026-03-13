@@ -1,1 +1,8 @@
-﻿<h1>Cart page</h1>
+﻿@model List<ProductModel>
+<div class="text-center">
+    <h1>Pruducts Cart</h1>
+    @foreach (var p in Model)
+    {
+        <p>@p.Name @p.</p>
+    }
+</div>

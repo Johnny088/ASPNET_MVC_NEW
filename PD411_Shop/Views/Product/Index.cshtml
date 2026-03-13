@@ -33,7 +33,12 @@
                     <td>@product.Description</td>
                     <td><img class="image-scale" height="50" src="~/images/@(product.Image != null ? $"{PathSettings.Products}/{product.Image}" : "default.webp")" alt="@product.Name" /></td>
                     <td>@product.CreatedDate.ToString("dd.mm.yyyy")</td>
-                    <td><a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id"><i class="bi bi-trash3-fill" style="color: red"></i></a></td>
+                    <td><a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id"><i class="bi bi-trash3-fill" style="color: red"></i></a>
+                        <a asp-controller="Product" asp-action="Update" asp-route-id="@product.Id">
+                            <i class="bi bi-pencil-fill text-success" style="font-size: 1rem"></i>
+                        </a>
+                        </td>
+
                 </tr>
 
             }

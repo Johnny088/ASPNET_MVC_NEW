@@ -1,0 +1,52 @@
+﻿@model UpdateProductVM;
+
+<div class="d-flex justify-content-center w-100  m-auto">
+    <form class="w-50"
+          method="post"
+          asp-controller="Product"
+          asp-action="Update"
+          enctype="multipart/form-data">
+          <input hidden asp-for="Id"/>
+        <fieldset>
+            <div class=" mb-2">
+                <label for="name" class="form-label mt-4">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter the name" asp-for="Name">
+                <span asp-validation-for="Name" style="color: red"></span>
+            </div>
+            <div class="mb-2">
+                <label for="description" class="form-label "> Product description</label>
+                <textarea class="form-control" id="description" name="description" placeholder="Enter the product's description" rows="3" asp-for="Description"></textarea>
+            </div>
+            <div class="mb-2">
+                <label for="price" class="form-label ">Price</label>
+                <input min="0" type="number" value="@Model.Price" class="form-control" id="price" name="price" placeholder="Enter the price" asp-for="Price">
+                <span asp-validation-for="Price" style="color: red"></span>
+            </div>
+
+            <div class="mb-2">
+                <label for="amount" class="form-label">Number of products</label>
+                <input min="0" type="number" value="@Model.Amount" class="form-control" id="amount" name="amount" placeholder="Enter number of the pruducts" asp-for="Amount">
+                <span asp-validation-for="Amount" style="color: red"></span>
+            </div>
+            <div class="mb-2">
+                <label for="color" class="form-label">Color</label>
+                <input type="text" class="form-control" id="color" name="color" placeholder="Enter the color" asp-for="Color">
+                <span asp-validation-for="Color" style="color: red"></span>
+            </div>
+            <div class="mb-2">
+                <label for="categoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" asp-items="@Model.SelectCategories" class="form-select">
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input accept="image/*" type="file" class="form-control" id="image" name="image" placeholder="put the image" asp-for="Image">
+
+            </div>
+            <div class="text-center">
+                <input class="btn btn-success w-25" type="submit" value="Save changes" />
+                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-danger w-25">Back</a>
+            </div>
+        </fieldset>
+    </form>
+</div>

@@ -1,5 +1,5 @@
 ﻿using PD411_Shop.ViewModels;
-using static System.Collections.Specialized.BitVector32;
+
 
 namespace PD411_Shop.Services
 {
@@ -56,6 +56,10 @@ namespace PD411_Shop.Services
                 item.Count -= 1;
                 session.Set(item);
             }
+        }
+        public static List<CartItemVM> GetItems(ISession session)
+        {
+            return session.Get<List<CartItemVM>>() ?? [];
         }
 
     }

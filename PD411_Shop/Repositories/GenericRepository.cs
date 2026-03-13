@@ -1,4 +1,5 @@
-﻿using PD411_Shop.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using PD411_Shop.Data;
 
 namespace PD411_Shop.Repositories
 {
@@ -19,7 +20,11 @@ namespace PD411_Shop.Repositories
         }
         public async Task UpdateAsync(TModel model)
         {
-            await _context.Set<TModel>().AddAsync(model);
+            if(_context.Entry(model).State != EntityState.Modified)
+            {
+                _context.Set<TModel>().Update(model);
+            }
+            //await _context.Set<TModel>().AddAsync(model);
             await _context.SaveChangesAsync();
         }
         public async Task DeleteAsync(int id)

@@ -83,46 +83,86 @@ namespace PD411_Shop.Controllers
             };
             if (vm.Image != null) 
             {
-                //string root = Directory.GetCurrentDirectory();
-                //string imagePath = Path.Combine(root, "wwwroot", "images");
-                //string ext = Path.GetExtension(vm.Image.FileName);
-                //string name = Guid.NewGuid().ToString();
-                //string fileName = name + ext;
-                //string filePath = Path.Combine(imagePath, fileName);
-                //using var imageStream = vm.Image.OpenReadStream();
-                //using var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write);
-                //imageStream.CopyTo(fileStream);
-                //model.Image = fileName;
+               
                 model.Image = await _imageService.SaveImageAsync(vm.Image, PathSettings.Products);
             }
-            //model.Category = category;
-            //await _context.Products.AddAsync(model);
-            //await _context.SaveChangesAsync();
+ 
             await _productRepository.CreateAsync(model);
 
+            return RedirectToAction("index");
+        }
+        // ------------------------get-------------------
+        public async Task<IActionResult> Update(int id)
+        {
+            var model = await _productRepository.GetByIdAsync(id);
+            if (model == null)
+            {
+                RedirectToAction("index");
+            }
+            var viewModel = new UpdateProductVM
+            {
+                Id = model.Id,
+                Amount = model.Amount,
+                CategoryId = model.CategoryId,
+                Color = model.Color,
+                Description = model.Description,
+                Price = model.Price,
+                Name = model.Name,
+                SelectCategories = await GetSelectCategoriesAsync()
+
+
+            };
+            return View(viewModel);
+        }
+        // ---------------------update-------------------
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(UpdateProductVM viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                viewModel.SelectCategories = await GetSelectCategoriesAsync();
+                return View(viewModel);
+            }
+            var model = await _productRepository.GetByIdAsync(viewModel.Id);
+            if (model != null)
+            {
+                model.Name = viewModel.Name!;
+                model.Description = viewModel.Description!;
+                model.Price = viewModel.Price!;
+                model.Color = viewModel.Color!;
+                model.Amount = viewModel.Amount!;
+                model.CategoryId = viewModel.CategoryId!;
+                if( viewModel.Image != null)
+                {
+                    string? ImageName = await _imageService.SaveImageAsync(viewModel.Image, "products");
+                    if (ImageName != null)
+                    {
+                        if (!string.IsNullOrEmpty(model.Image))
+                        {
+                            _imageService.DeleteImage("products", model.Image);
+                        }
+                    }
+                    model.Image = ImageName;
+                }
+               await _productRepository.UpdateAsync(model);
+            }
             return RedirectToAction("index");
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-            //var product = _context.Products.FirstOrDefault(p => p.Id == id);
+            
             var product = await _productRepository.GetByIdAsync(id);
             if( product != null)
             {
                 if(product.Image != null)
                 {
-                    //string root = Directory.GetCurrentDirectory();
-                    //string imagesPath = Path.Combine(root, "wwwroot", "images");
-                    //string filePath = Path.Combine($"{imagesPath}", product.Image);
-                    //if (System.IO.File.Exists(imagesPath))
-                    //{
-                    //    System.IO.File.Delete(filePath);
-                    //}
+                    
                     _imageService.DeleteImage(PathSettings.Products, product.Image);
                     
                 }
-                //_context.Products.Remove(product);
-                //await _context.SaveChangesAsync();
+              
                 await _productRepository.DeleteAsync(product.Id);
             }
             return RedirectToAction("index");
